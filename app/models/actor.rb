@@ -4,12 +4,13 @@ class Actor < ActiveRecord::Base
   has_many :shows, through: :characters
 
   def full_name
-    binding.pry 
+  
     "#{self.first_name} #{self.last_name}"
   end 
   
   def list_roles
-    roles = self.map do {|character, show| character.name, show.name}
+    binding.pry 
+    roles = self.characters.map do {|character, show| character.name, show.name}
    end 
   end 
 end
