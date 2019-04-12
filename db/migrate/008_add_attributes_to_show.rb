@@ -1,4 +1,4 @@
-class AddAttributesToShow < ActiveRecord::Migration[5.1]
+class AddAttributesToShow < ActiveRecord::Migration[4.2]
   def change 
     add_column :shows, :day, :string 
     add_column :shows, :season, :string
