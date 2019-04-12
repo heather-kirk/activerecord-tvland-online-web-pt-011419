@@ -10,7 +10,7 @@ class Actor < ActiveRecord::Base
   
   def list_roles
     binding.pry 
-    roles = self.characters.map do {|character, show| character.name, show.name}
+    roles = self.characters.map do {|character| character.name, show.name}
    end 
   end 
 end
